@@ -421,7 +421,7 @@
 
     
         
-        <li class="header">第三章 正则表达式</li>
+        <li class="header">第三章 Sed正则表达式</li>
         
         
     
@@ -470,6 +470,91 @@
             
                     
                     22. Sed基于正则表达式的替换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">第四章 Sed的执行</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../part4/">
+            
+                <a href="../part4/">
+            
+                    
+                    说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../part4/multiplecmd.html">
+            
+                <a href="../part4/multiplecmd.html">
+            
+                    
+                    23. 命令行中的多个Sed命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../part4/script.html">
+            
+                <a href="../part4/script.html">
+            
+                    
+                    24. Sed脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.4" data-path="../part4/comment.html">
+            
+                <a href="../part4/comment.html">
+            
+                    
+                    25. Sed注释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.5" data-path="../part4/interpreter.html">
+            
+                <a href="../part4/interpreter.html">
+            
+                    
+                    26. Sed解释执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.6" data-path="../part4/modifying.html">
+            
+                <a href="../part4/modifying.html">
+            
+                    
+                    27. 直接将修改应用到输入文件
             
                 </a>
             
@@ -583,7 +668,7 @@ sed&#x811A;&#x672C;&#x6765;&#x89E3;&#x51B3;&#x5F88;&#x591A;&#x7684;&#x590D;&#x67
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"说明","level":"2.1","depth":1,"next":{"title":"1. Sed命令语法","level":"2.2","depth":1,"path":"part1/syntax.md","ref":"part1/syntax.md","articles":[]},"previous":{"title":"序言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part1/README.md","mtime":"2018-04-17T06:01:52.173Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-29T03:05:05.347Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"说明","level":"2.1","depth":1,"next":{"title":"1. Sed命令语法","level":"2.2","depth":1,"path":"part1/syntax.md","ref":"part1/syntax.md","articles":[]},"previous":{"title":"序言","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part1/README.md","mtime":"2018-04-17T06:01:52.173Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-30T03:18:55.791Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -594,10 +679,6 @@ sed&#x811A;&#x672C;&#x6765;&#x89E3;&#x51B3;&#x5F88;&#x591A;&#x7684;&#x590D;&#x67
     
         
         <script src="../gitbook/gitbook-plugin-terminal/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
         
     
         

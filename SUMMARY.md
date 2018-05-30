@@ -27,8 +27,16 @@
 * [18. 分组替换（多组）](part2/multiple_group.md)
 * [19.  Gnu Sed {replacement-string}标志](part2/string.md)
 
-### 第三章 正则表达式
+### 第三章 Sed正则表达式
 * [说明](part3/README.md)
 * [20. 正则表达式基本原理](part3/syntax.md)
 * [21. 扩展正则表达式](part3/additional.md)
 * [22. Sed基于正则表达式的替换](part3/substitution.md)
+
+### 第四章 Sed的执行
+* [说明](part4/README.md)
+* [23. 命令行中的多个Sed命令](part4/multiplecmd.md)
+* [24. Sed脚本](part4/script.md)
+* [25. Sed注释](part4/comment.md)
+* [26. Sed解释执行](part4/interpreter.md)
+* [27. 直接将修改应用到输入文件](part4/modifying.md)
