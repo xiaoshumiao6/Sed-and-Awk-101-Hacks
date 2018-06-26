@@ -678,7 +678,7 @@
                 <a href="multiple.html">
             
                     
-                    35. 命令作用于多个文件
+                    35. 指定多个输入文件
             
                 </a>
             
@@ -704,7 +704,7 @@
                 <a href="read.html">
             
                     
-                    37. 从文件中读命令（r 命令）
+                    37. 读取额外文件（r 命令）
             
                 </a>
             
@@ -796,7 +796,46 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x6253;&#x5370;&#x884C;&#x53F7;"><b>1. </b>&#x6253;&#x5370;&#x884C;&#x53F7;</a></li></ul></div><a href="#&#x6253;&#x5370;&#x884C;&#x53F7;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6253;&#x5370;&#x884C;&#x53F7;"><a name="&#x6253;&#x5370;&#x884C;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x6253;&#x5370;&#x884C;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6253;&#x5370;&#x884C;&#x53F7;</h1>
+<p>Sed = &#x547D;&#x4EE4;&#x4F1A;&#x6253;&#x5370;&#x8F93;&#x5165;&#x6587;&#x672C;&#x7684;&#x7684;&#x884C;&#x53F7;</p>
+<p><strong>&#x6253;&#x5370;&#x6240;&#x6709;&#x884C;&#x53F7;</strong></p>
+<pre><code>$ sed = employee.txt
+1
+101,John Doe,CEO
+2
+102,Jason Smith,IT Manager
+3
+103,Raj Reddy,Sysadmin
+4
+104,Anand Ram,Developer
+5
+105,Jane Miller,Sales Manager
+</code></pre><p><span class="pg-emphasize pg-emphasize-yellow" style="">&#x6CE8;&#x610F;</span>&#xFF1A;&#x4F60;&#x53EF;&#x4EE5;&#x7ED3;&#x5408;=&#x548C;&#x6570;&#x5B57;&#x6765;&#x9650;&#x5236;&#x6253;&#x5370;&#x884C;&#x53F7;&#x7684;&#x8303;&#x56F4;</p>
+<p><strong>&#x53EA;&#x6253;&#x5370;1-3&#x884C;&#x7684;&#x884C;&#x53F7;</strong></p>
+<pre><code>$ sed &apos;1,3 =&apos; employee.txt
+1
+101,John Doe,CEO
+2
+102,Jason Smith,IT Manager
+3
+103,Raj Reddy,Sysadmin
+104,Anand Ram,Developer
+105,Jane Miller,Sales Manager
+</code></pre><p>&#x53EA;&#x6253;&#x5370;&#x5339;&#x914D;&#x5230;&#x5173;&#x952E;&#x5B57;&#x6240;&#x5728;&#x884C;&#x7684;&#x884C;&#x53F7;&#x3002;</p>
+<pre><code>$ sed &apos;/Jane/ =&apos; employee.txt
+101,John Doe,CEO
+102,Jason Smith,IT Manager
+103,Raj Reddy,Sysadmin
+104,Anand Ram,Developer
+5
+105,Jane Miller,Sales Manager
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x53EA;&#x60F3;&#x77E5;&#x9053;&#x5339;&#x914D;&#x5230;&#x5173;&#x952E;&#x5B57;&#x6240;&#x5728;&#x884C;&#x7684;&#x884C;&#x53F7;&#xFF0C;&#x800C;&#x4E0D;&#x5173;&#x5FC3;&#x5185;&#x5BB9;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;-n&#x53C2;&#x6570;</p>
+<pre><code>$ sed -n &apos;/Raj/ =&apos; employee.txt
+3
+</code></pre><p><strong>&#x6253;&#x5370;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7684;&#x603B;&#x884C;&#x6570;</strong></p>
+<pre><code>$ sed -n &apos;$ =&apos; employee.txt
+5
+</code></pre>
                                 
                                 </section>
                             
@@ -839,7 +878,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"33. 打印行号（= 命令）","level":"6.7","depth":1,"next":{"title":"34. 改变大小写（y 命令）","level":"6.8","depth":1,"path":"part5/case.md","ref":"part5/case.md","articles":[]},"previous":{"title":"32. 打印隐藏字符（l 命令）","level":"6.6","depth":1,"path":"part5/hidden.md","ref":"part5/hidden.md","articles":[]},"dir":"neutral"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part5/linenumber.md","mtime":"2018-06-25T12:23:13.124Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-25T11:49:04.048Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"33. 打印行号（= 命令）","level":"6.7","depth":1,"next":{"title":"34. 改变大小写（y 命令）","level":"6.8","depth":1,"path":"part5/case.md","ref":"part5/case.md","articles":[]},"previous":{"title":"32. 打印隐藏字符（l 命令）","level":"6.6","depth":1,"path":"part5/hidden.md","ref":"part5/hidden.md","articles":[]},"dir":"ltr"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part5/linenumber.md","mtime":"2018-06-26T07:13:11.424Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-26T08:50:17.724Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

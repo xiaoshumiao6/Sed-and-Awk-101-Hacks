@@ -678,7 +678,7 @@
                 <a href="multiple.html">
             
                     
-                    35. 命令作用于多个文件
+                    35. 指定多个输入文件
             
                 </a>
             
@@ -704,7 +704,7 @@
                 <a href="read.html">
             
                     
-                    37. 从文件中读命令（r 命令）
+                    37. 读取额外文件（r 命令）
             
                 </a>
             
@@ -796,7 +796,31 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x6A21;&#x62DF;unix&#x547D;&#x4EE4;&#xFF08;cat&#x3001;grep&#x3001;head&#xFF09;"><b>1. </b>&#x6A21;&#x62DF;Unix&#x547D;&#x4EE4;&#xFF08;cat&#x3001;grep&#x3001;head&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#cat"><b>1.1. </b>Cat</a></li><li><span class="title-icon "></span><a href="#grep"><b>1.2. </b>Grep</a></li><li><span class="title-icon "></span><a href="#head"><b>1.3. </b>Head</a></li></ul></ul></div><a href="#&#x6A21;&#x62DF;unix&#x547D;&#x4EE4;&#xFF08;cat&#x3001;grep&#x3001;head&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6A21;&#x62DF;unix&#x547D;&#x4EE4;&#xFF08;cat&#x3001;grep&#x3001;head&#xFF09;"><a name="&#x6A21;&#x62DF;unix&#x547D;&#x4EE4;&#xFF08;cat&#x3001;grep&#x3001;head&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x62DF;unix&#x547D;&#x4EE4;&#xFF08;cat&#x3001;grep&#x3001;head&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6A21;&#x62DF;Unix&#x547D;&#x4EE4;&#xFF08;cat&#x3001;grep&#x3001;head&#xFF09;</h1>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x770B;&#x5230;&#x4E86;&#x4E0E;&#x5176;&#x4ED6;&#x6807;&#x51C6;UNIX&#x547D;&#x4EE4;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#x7684;&#x4F8B;&#x5B50;&#x3002; &#x4F7F;&#x7528;sed&#x4F60;&#x53EF;&#x4EE5;&#x6A21;&#x62DF;&#x8BB8;&#x591A;&#x547D;&#x4EE4;, &#x8FD9;&#x6837;&#x505A;&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x4E86;&#x89E3;sed&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#x3002;</p>
+<h2 id="cat"><a name="cat" class="anchor-navigation-ex-anchor" href="#cat"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. Cat</h2>
+<pre><code>cat employee.txt
+</code></pre><p>&#x4EE5;&#x4E0B;&#x6BCF;&#x4E2A;sed&#x547D;&#x4EE4;&#x90FD;&#x4F1A;&#x4EA7;&#x751F;&#x4E0E;&#x4E0A;&#x8FF0;cat&#x547D;&#x4EE4;&#x76F8;&#x540C;&#x7684;&#x8F93;&#x51FA;&#x3002;</p>
+<pre><code>sed &apos;s/JUNK/&amp;/p&apos; employee.txt
+sed -n &apos;p&apos; employee.txt
+sed &apos;n&apos; employee.txt
+sed &apos;N&apos; employee.txt
+</code></pre><h2 id="grep"><a name="grep" class="anchor-navigation-ex-anchor" href="#grep"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. Grep</h2>
+<pre><code>grep Jane employee.txt
+</code></pre><p>&#x4EE5;&#x4E0B;&#x6BCF;&#x4E2A;sed&#x547D;&#x4EE4;&#x90FD;&#x4F1A;&#x4EA7;&#x751F;&#x4E0E;&#x4E0A;&#x8FF0;grep&#x547D;&#x4EE4;&#x76F8;&#x540C;&#x7684;&#x8F93;&#x51FA;&#x3002;</p>
+<pre><code>sed -n &apos;s/Jane/&amp;/p&apos; employee.txt
+sed -n &apos;/Jane/ p&apos; employee.txt
+</code></pre><p><strong>grep -v (&#x6253;&#x5370;&#x975E;&#x5339;&#x914D;&#x884C;)</strong></p>
+<pre><code>grep -v Jane employee.txt
+</code></pre><p>&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x7B49;&#x4EF7;&#x4E8E;&#x4E0A;&#x9762;&#x7684; &quot;grep -v&quot; &#x547D;&#x4EE4;</p>
+<pre><code>sed -n &apos;/Jane/ !p&apos; employee.txt
+</code></pre><h2 id="head"><a name="head" class="anchor-navigation-ex-anchor" href="#head"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. Head</h2>
+<pre><code>head -10 /etc/passwd
+</code></pre><p>&#x4EE5;&#x4E0B;&#x6BCF;&#x4E2A;sed&#x547D;&#x4EE4;&#x90FD;&#x4F1A;&#x4EA7;&#x751F;&#x4E0E;&#x4E0A;&#x8FF0;head&#x547D;&#x4EE4;&#x76F8;&#x540C;&#x7684;&#x8F93;&#x51FA;&#x3002;</p>
+<pre><code>sed &apos;11,$ d&apos; /etc/passwd
+sed -n &apos;1,10 p&apos; /etc/passwd
+sed &apos;10 q&apos; /etc/passwd
+</code></pre>
                                 
                                 </section>
                             
@@ -823,7 +847,7 @@
 
             
                 
-                <a href="read.html" class="navigation navigation-prev " aria-label="Previous page: 37. 从文件中读命令（r 命令）">
+                <a href="read.html" class="navigation navigation-prev " aria-label="Previous page: 37. 读取额外文件（r 命令）">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -839,7 +863,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"38. 模拟Unix命令（cat、grep、head）","level":"6.12","depth":1,"next":{"title":"39. sed命令行参数","level":"6.13","depth":1,"path":"part5/option.md","ref":"part5/option.md","articles":[]},"previous":{"title":"37. 从文件中读命令（r 命令）","level":"6.11","depth":1,"path":"part5/read.md","ref":"part5/read.md","articles":[]},"dir":"neutral"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part5/unix.md","mtime":"2018-06-25T12:23:13.124Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-25T11:49:04.048Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"38. 模拟Unix命令（cat、grep、head）","level":"6.12","depth":1,"next":{"title":"39. sed命令行参数","level":"6.13","depth":1,"path":"part5/option.md","ref":"part5/option.md","articles":[]},"previous":{"title":"37. 读取额外文件（r 命令）","level":"6.11","depth":1,"path":"part5/read.md","ref":"part5/read.md","articles":[]},"dir":"ltr"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part5/unix.md","mtime":"2018-06-26T08:07:03.554Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-26T08:50:17.724Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

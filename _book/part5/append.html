@@ -678,7 +678,7 @@
                 <a href="multiple.html">
             
                     
-                    35. 命令作用于多个文件
+                    35. 指定多个输入文件
             
                 </a>
             
@@ -704,7 +704,7 @@
                 <a href="read.html">
             
                     
-                    37. 从文件中读命令（r 命令）
+                    37. 读取额外文件（r 命令）
             
                 </a>
             
@@ -796,7 +796,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x540E;&#x9762;&#x8FFD;&#x52A0;&#x65B0;&#x884C;"><b>1. </b>&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x540E;&#x9762;&#x8FFD;&#x52A0;&#x65B0;&#x884C;</a></li></ul></div><a href="#&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x540E;&#x9762;&#x8FFD;&#x52A0;&#x65B0;&#x884C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x540E;&#x9762;&#x8FFD;&#x52A0;&#x65B0;&#x884C;"><a name="&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x540E;&#x9762;&#x8FFD;&#x52A0;&#x65B0;&#x884C;" class="anchor-navigation-ex-anchor" href="#&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x540E;&#x9762;&#x8FFD;&#x52A0;&#x65B0;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x7684;&#x540E;&#x9762;&#x8FFD;&#x52A0;&#x65B0;&#x884C;</h1>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FFD;&#x52A0;&#x547D;&#x4EE4;&#xFF08;a&#xFF09;&#x5728;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#x540E;&#x9762;&#x63D2;&#x5165;&#x65B0;&#x884C;</p>
+<p><strong>&#x8BED;&#x6CD5;&#xFF1A;</strong></p>
+<pre><code>$ sed &apos;[address] a the-line-to-append&apos; input-file
+</code></pre><p><strong>&#x5728;employee.txt&#x6587;&#x4EF6;&#x6307;&#x5B9A;&#x7684;&#x884C;&#x53F7;2&#x4E4B;&#x540E;&#x63D2;&#x5165;&#x65B0;&#x7684;&#x8BB0;&#x5F55;</strong></p>
+<pre><code>$ sed &apos;2 a 203,Jack Johnson,Engineer&apos; employee.txt
+101,John Doe,CEO
+102,Jason Smith,IT Manager
+203,Jack Johnson,Engineer
+103,Raj Reddy,Sysadmin
+104,Anand Ram,Developer
+105,Jane Miller,Sales Manager
+</code></pre><p><strong>&#x5728;employee.txt&#x6587;&#x4EF6;&#x672B;&#x5C3E;&#x63D2;&#x5165;&#x65B0;&#x7684;&#x8BB0;&#x5F55;</strong></p>
+<pre><code>$ sed &apos;$ a 106,Jack Johnson,Engineer&apos; employee.txt
+101,John Doe,CEO
+102,Jason Smith,IT Manager
+103,Raj Reddy,Sysadmin
+104,Anand Ram,Developer
+105,Jane Miller,Sales Manager
+106,Jack Johnson,Engineer
+</code></pre><p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;a&#x547D;&#x4EE4;&#x540C;&#x65F6;&#x63D2;&#x5165;&#x591A;&#x884C;</p>
+<p><strong>&#x5728;&#x5339;&#x914D;&#x5230;&#x2018;Jason&#x2019;&#x7684;&#x6240;&#x5728;&#x884C;&#x4E4B;&#x540E;&#x63D2;&#x5165;&#x4E24;&#x884C;&#x65B0;&#x8BB0;&#x5F55;</strong></p>
+<pre><code>$ sed &apos;/Jason/a\
+203,Jack Johnson,Engineer\
+204,Mark Smith,Sales Engineer&apos; employee.txt
+101,John Doe,CEO
+102,Jason Smith,IT Manager
+203,Jack Johnson,Engineer
+204,Mark Smith,Sales Engineer
+103,Raj Reddy,Sysadmin
+104,Anand Ram,Developer
+105,Jane Miller,Sales Manager
+</code></pre>
                                 
                                 </section>
                             
@@ -839,7 +871,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"28. 行后追加（a 命令）","level":"6.2","depth":1,"next":{"title":"29. 行前追加（i 命令）","level":"6.3","depth":1,"path":"part5/insert.md","ref":"part5/insert.md","articles":[]},"previous":{"title":"说明","level":"6.1","depth":1,"path":"part5/README.md","ref":"part5/README.md","articles":[]},"dir":"neutral"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part5/append.md","mtime":"2018-06-25T12:21:41.018Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-25T11:49:04.048Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"28. 行后追加（a 命令）","level":"6.2","depth":1,"next":{"title":"29. 行前追加（i 命令）","level":"6.3","depth":1,"path":"part5/insert.md","ref":"part5/insert.md","articles":[]},"previous":{"title":"说明","level":"6.1","depth":1,"path":"part5/README.md","ref":"part5/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part5/append.md","mtime":"2018-06-26T06:25:12.073Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-26T08:50:17.724Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

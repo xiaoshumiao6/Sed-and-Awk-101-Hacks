@@ -676,7 +676,7 @@
                 <a href="multiple.html">
             
                     
-                    35. 命令作用于多个文件
+                    35. 指定多个输入文件
             
                 </a>
             
@@ -702,7 +702,7 @@
                 <a href="read.html">
             
                     
-                    37. 从文件中读命令（r 命令）
+                    37. 读取额外文件（r 命令）
             
                 </a>
             
@@ -794,7 +794,29 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x6253;&#x5370;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;n&#xFF09;"><b>1. </b>&#x6253;&#x5370;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;n&#xFF09;</a></li></ul></div><a href="#&#x6253;&#x5370;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;n&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6253;&#x5370;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;n&#xFF09;"><a name="&#x6253;&#x5370;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;n&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x6253;&#x5370;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;n&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x6253;&#x5370;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;n&#xFF09;</h1>
+<p>sed n&#x547D;&#x4EE4;&#x6253;&#x5370;&#x5F53;&#x524D;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x5E76;&#x4ECE;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x4E2D;&#x63D0;&#x53D6;&#x4E0B;&#x4E00;&#x884C;&#x3002;&#x8FD9;&#x53D1;&#x751F;&#x5728;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x7684;&#x4E2D;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x5B83;&#x53D1;&#x751F;&#x5728;&#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x4E4B;&#x95F4;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x6539;&#x53D8;&#x6B63;&#x5E38;&#x6D41;&#x7A0B;&#x3002;</p>
+<p><strong>&#x6253;&#x5370;&#x6BCF;&#x884C;&#x7684;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;</strong></p>
+<pre><code>$ sed n employee.txt
+101,John Doe,CEO
+102,Jason Smith,IT Manager
+103,Raj Reddy,Sysadmin
+104,Anand Ram,Developer
+105,Jane Miller,Sales Manager
+</code></pre><p>&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;n&#x547D;&#x4EE4;&#x7684;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x4E86;-n&#x6807;&#x5FD7;&#xFF0C;sed&#x5C06;&#x4E0D;&#x4F1A;&#x6253;&#x5370;&#x4EFB;&#x4F55;&#x4E1C;&#x897F;&#x3002;</p>
+<pre><code>$ sed -n n employee.txt
+</code></pre><p>&#x6B63;&#x5982;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x6240;&#x8BA8;&#x8BBA;&#x7684;&#xFF0C;&#x666E;&#x901A;&#x7684;sed&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x662F;Read&#xFF0C;Execute&#xFF08;&#x6240;&#x6709;&#x53EF;&#x7528;&#x7684;sed&#x547D;&#x4EE4;&#xFF09;&#xFF0C;Print&#xFF0C;Repeat&#x3002;<br>
+sed n&#x547D;&#x4EE4;&#x53EF;&#x8BA9;&#x60A8;&#x66F4;&#x6539;&#x8BE5;&#x6D41;&#x7A0B;&#x3002; sed n&#x547D;&#x4EE4;&#x5C06;&#x6253;&#x5370;&#x5F53;&#x524D;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF0C;&#x6E05;&#x9664;&#x5F53;&#x524D;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF0C;&#x4ECE;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x4E0B;&#x4E00;&#x884C;&#xFF0C;&#x5E76;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x6D41;&#x7A0B;&#x3002;<br></p>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x4F60;&#x6709;2&#x4E2A;sed&#x547D;&#x4EE4;&#xFF0C;&#x4E4B;&#x524D;&#x548C;&#x4E4B;&#x540E;&#x6709;2&#x4E2A;sed&#x547D;&#x4EE4;,&#x5982;&#x4E0B;&#x6240;&#x793A;&#x3002;</p>
+<pre><code>sed-command-1
+sed-command-2
+n
+sed-command-3
+sed-command-4
+</code></pre><p>&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;sed-command-1&#x548C;sed-command-2&#x5C06;&#x5E94;&#x7528;&#x4E8E;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x5F53;&#x524D;&#x884C;; &#x5F53;sed&#x9047;&#x5230;n&#x547D;&#x4EE4;&#x65F6;&#xFF0C;&#x5B83;&#x5C06;&#x4ECE;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x4E2D;&#x6E05;&#x9664;&#x5F53;&#x524D;&#x884C;&#xFF0C;&#x4ECE;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x4E0B;&#x4E00;&#x884C;&#xFF0C;
+&#x5E76;&#x5C06;sed-command-3&#x548C;sed-command-4&#x5E94;&#x7528;&#x4E8E;sed&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x65B0;&#x8BFB;&#x53D6;&#x884C;&#x7A7A;&#x95F4;&#x3002;<br></p>
+<p><span class="pg-emphasize pg-emphasize-yello" style="">&#x6CE8;&#x610F;</span>: &#x6B63;&#x5982;&#x4F60;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x770B;&#x5230;&#x7684;&#x90A3;&#x6837;&#xFF0C;sed n&#x547D;&#x4EE4;&#x672C;&#x8EAB;&#x76F8;&#x5BF9;&#x6CA1;&#x6709;&#x7528;&#x5904;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x5B83;&#x4E0E;&#x4EE5;&#x4E0B;&#x9ED1;&#x5BA2;&#x4E2D;&#x8BA8;&#x8BBA;&#x7684;sed&#x4FDD;&#x7559;&#x6A21;&#x5F0F;&#x547D;&#x4EE4;&#x7ED3;&#x5408;&#x4F7F;&#x7528;&#x65F6;&#x529F;&#x80FD;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#x3002;</p>
+
                                 
                                 </section>
                             
@@ -833,7 +855,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"40. 打印模式空间（n 命令）","level":"6.14","depth":1,"previous":{"title":"39. sed命令行参数","level":"6.13","depth":1,"path":"part5/option.md","ref":"part5/option.md","articles":[]},"dir":"neutral"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part5/patter.md","mtime":"2018-06-25T12:23:13.124Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-25T11:49:04.048Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"40. 打印模式空间（n 命令）","level":"6.14","depth":1,"previous":{"title":"39. sed命令行参数","level":"6.13","depth":1,"path":"part5/option.md","ref":"part5/option.md","articles":[]},"dir":"ltr"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part5/patter.md","mtime":"2018-06-26T08:50:09.549Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-26T08:50:17.724Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

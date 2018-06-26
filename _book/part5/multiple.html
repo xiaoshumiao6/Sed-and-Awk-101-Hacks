@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>35. 命令作用于多个文件 · Sed-and-Awk-101-Hacks</title>
+        <title>35. 指定多个输入文件 · Sed-and-Awk-101-Hacks</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -678,7 +678,7 @@
                 <a href="multiple.html">
             
                     
-                    35. 命令作用于多个文件
+                    35. 指定多个输入文件
             
                 </a>
             
@@ -704,7 +704,7 @@
                 <a href="read.html">
             
                     
-                    37. 从文件中读命令（r 命令）
+                    37. 读取额外文件（r 命令）
             
                 </a>
             
@@ -781,7 +781,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >35. 命令作用于多个文件</a>
+        <a href=".." >35. 指定多个输入文件</a>
     </h1>
 </div>
 
@@ -796,7 +796,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x547D;&#x4EE4;&#x4F5C;&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4E4B;&#x4E0A;"><b>1. </b>&#x547D;&#x4EE4;&#x4F5C;&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4E4B;&#x4E0A;</a></li></ul></div><a href="#&#x547D;&#x4EE4;&#x4F5C;&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4E4B;&#x4E0A;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x547D;&#x4EE4;&#x4F5C;&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4E4B;&#x4E0A;"><a name="&#x547D;&#x4EE4;&#x4F5C;&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4E4B;&#x4E0A;" class="anchor-navigation-ex-anchor" href="#&#x547D;&#x4EE4;&#x4F5C;&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4E4B;&#x4E0A;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x547D;&#x4EE4;&#x4F5C;&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#x4E4B;&#x4E0A;</h1>
+<p>&#x5728;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x6240;&#x6709;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x4E86;&#x5355;&#x4E2A;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x591A;&#x4E2A;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x5728;/etc/passwd&#x6587;&#x4EF6;&#x4E2D;&#x641C;&#x5BFB;&#x201C;root&#x201D;&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x5E76;&#x6253;&#x5370;&#x51FA;&#x6765;.</p>
+<pre><code>$ sed -n &apos;/root/ p&apos; /etc/passwd
+root:x:0:0:root:/root:/bin/bash
+</code></pre><p>&#x540C;&#x4E0A;&#xFF0C;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;/etc/group&#x4E2D;&#x505A;&#x540C;&#x6837;&#x7684;&#x64CD;&#x4F5C;</p>
+<pre><code>$ sed -n &apos;/root/ p&apos; /etc/group
+root:x:0:
+</code></pre><p>&#x7ED3;&#x5408;&#x4E0A;&#x9762;&#x4E24;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5728;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x641C;&#x5BFB;&#x201C;root&#x201D;&#x5173;&#x952E;&#x5B57;&#x5E76;&#x6253;&#x5370;</p>
+<pre><code>$ sed -n &apos;/root/ p&apos; /etc/passwd /etc/group
+root:x:0:0:root:/root:/bin/bash
+root:x:0:
+</code></pre>
                                 
                                 </section>
                             
@@ -839,7 +851,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"35. 命令作用于多个文件","level":"6.9","depth":1,"next":{"title":"36. 退出（q 命令）","level":"6.10","depth":1,"path":"part5/quit.md","ref":"part5/quit.md","articles":[]},"previous":{"title":"34. 改变大小写（y 命令）","level":"6.8","depth":1,"path":"part5/case.md","ref":"part5/case.md","articles":[]},"dir":"neutral"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part5/multiple.md","mtime":"2018-06-25T12:23:13.124Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-25T11:49:04.048Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"35. 指定多个输入文件","level":"6.9","depth":1,"next":{"title":"36. 退出（q 命令）","level":"6.10","depth":1,"path":"part5/quit.md","ref":"part5/quit.md","articles":[]},"previous":{"title":"34. 改变大小写（y 命令）","level":"6.8","depth":1,"path":"part5/case.md","ref":"part5/case.md","articles":[]},"dir":"ltr"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part5/multiple.md","mtime":"2018-06-26T07:28:13.701Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-26T08:50:17.724Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
