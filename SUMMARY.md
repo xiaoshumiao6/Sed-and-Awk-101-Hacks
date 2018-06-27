@@ -56,3 +56,19 @@
 * [38. 模拟Unix命令（cat、grep、head）](part5/unix.md)
 * [39. sed命令行参数](part5/option.md)
 * [40. 打印模式空间（n 命令）](part5/patter.md)
+
+### 第六章 Sed的保持空间和模式空间命令
+* [说明](part6/README.md)
+* [41. 用保持空间交换模式空间（x 命令）](part6/swap.md)
+* [42. 拷贝模式空间到保持空间（h 命令）](part6/copyp2h.md)
+* [43. 追加模式空间到保持空间（H 命令）](part6/appendp2h.md)
+* [44. 拷贝保持空间到模式空间（g 命令）](part6/copyh2p.md)
+* [45. 追加保持空间到模式空间（G 命令）](part6/appendh2p)
+
+### 第七章 Sed多命令行和循环
+* [说明](part7/README.md)
+* [46. 追加下一行到模式空间（N 命令）](part7/append.md)
+* [47. 在MultiLine中打印第一行（P 命令）](part7/print.md)
+* [48. 在MultiLine中删除第一行（D 命令）](part7/delete.md)
+* [49. 循环和分支（b 命令和 ：label）](part7/loop_and_branch.md)
+* [50. 循环使用t命令](part7/loop_t.md)
