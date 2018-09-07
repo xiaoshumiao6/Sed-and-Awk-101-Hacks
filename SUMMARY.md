@@ -59,7 +59,7 @@
 
 ### 第六章 Sed的保持空间和模式空间命令
 * [说明](part6/README.md)
-* [41. 用保持空间交换模式空间（x 命令）](part6/swap.md)
+* [41. 交换模式空间与保持空间（x 命令）](part6/swap.md)
 * [42. 拷贝模式空间到保持空间（h 命令）](part6/copyp2h.md)
 * [43. 追加模式空间到保持空间（H 命令）](part6/appendp2h.md)
 * [44. 拷贝保持空间到模式空间（g 命令）](part6/copyh2p.md)

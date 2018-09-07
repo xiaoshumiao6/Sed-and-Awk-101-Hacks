@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>23. 命令行中的多个Sed命令 · Sed-and-Awk-101-Hacks</title>
+        <title>43. 追加模式空间到保持空间（H 命令） · Sed-and-Awk-101-Hacks</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -77,10 +77,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="script.html" />
+    <link rel="next" href="copyh2p.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="copyp2h.html" />
     
 
     </head>
@@ -484,9 +484,9 @@
         
         
     
-        <li class="chapter " data-level="5.1" data-path="./">
+        <li class="chapter " data-level="5.1" data-path="../part4/">
             
-                <a href="./">
+                <a href="../part4/">
             
                     
                     说明
@@ -497,9 +497,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.2" data-path="multiplecmd.html">
+        <li class="chapter " data-level="5.2" data-path="../part4/multiplecmd.html">
             
-                <a href="multiplecmd.html">
+                <a href="../part4/multiplecmd.html">
             
                     
                     23. 命令行中的多个Sed命令
@@ -510,9 +510,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.3" data-path="script.html">
+        <li class="chapter " data-level="5.3" data-path="../part4/script.html">
             
-                <a href="script.html">
+                <a href="../part4/script.html">
             
                     
                     24. Sed脚本
@@ -523,9 +523,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.4" data-path="comment.html">
+        <li class="chapter " data-level="5.4" data-path="../part4/comment.html">
             
-                <a href="comment.html">
+                <a href="../part4/comment.html">
             
                     
                     25. Sed注释
@@ -536,9 +536,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.5" data-path="interpreter.html">
+        <li class="chapter " data-level="5.5" data-path="../part4/interpreter.html">
             
-                <a href="interpreter.html">
+                <a href="../part4/interpreter.html">
             
                     
                     26. Sed解释执行
@@ -549,9 +549,9 @@
             
         </li>
     
-        <li class="chapter " data-level="5.6" data-path="modifying.html">
+        <li class="chapter " data-level="5.6" data-path="../part4/modifying.html">
             
-                <a href="modifying.html">
+                <a href="../part4/modifying.html">
             
                     
                     27. 直接将修改应用到输入文件
@@ -758,7 +758,7 @@
         
         
     
-        <li class="chapter " data-level="7.1" data-path="../part6/README.md">
+        <li class="chapter " data-level="7.1" data-path="README.md">
             
                 <span>
             
@@ -771,9 +771,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.2" data-path="../part6/swap.html">
+        <li class="chapter " data-level="7.2" data-path="swap.html">
             
-                <a href="../part6/swap.html">
+                <a href="swap.html">
             
                     
                     41. 交换模式空间与保持空间（x 命令）
@@ -784,9 +784,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.3" data-path="../part6/copyp2h.html">
+        <li class="chapter " data-level="7.3" data-path="copyp2h.html">
             
-                <a href="../part6/copyp2h.html">
+                <a href="copyp2h.html">
             
                     
                     42. 拷贝模式空间到保持空间（h 命令）
@@ -797,9 +797,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.4" data-path="../part6/appendp2h.html">
+        <li class="chapter active" data-level="7.4" data-path="appendp2h.html">
             
-                <a href="../part6/appendp2h.html">
+                <a href="appendp2h.html">
             
                     
                     43. 追加模式空间到保持空间（H 命令）
@@ -810,9 +810,9 @@
             
         </li>
     
-        <li class="chapter " data-level="7.5" data-path="../part6/copyh2p.html">
+        <li class="chapter " data-level="7.5" data-path="copyh2p.html">
             
-                <a href="../part6/copyh2p.html">
+                <a href="copyh2p.html">
             
                     
                     44. 拷贝保持空间到模式空间（g 命令）
@@ -823,7 +823,7 @@
             
         </li>
     
-        <li class="chapter " data-level="7.6" data-path="../part6/appendh2p">
+        <li class="chapter " data-level="7.6" data-path="appendh2p">
             
                 <span>
             
@@ -951,7 +951,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >23. 命令行中的多个Sed命令</a>
+        <a href=".." >43. 追加模式空间到保持空间（H 命令）</a>
     </h1>
 </div>
 
@@ -966,26 +966,56 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x591A;&#x7EC4;sed&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;"><b>1. </b>&#x591A;&#x7EC4;Sed&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4F7F;&#x7528;-e&#x53C2;&#x6570;"><b>1.1. </b>&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4F7F;&#x7528;-e&#x53C2;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x5206;&#x89E3;sed&#x7684;&#x547D;&#x4EE4;"><b>1.2. </b>&#x4F7F;&#x7528;&quot;\&quot;&#x5206;&#x89E3;sed&#x7684;&#x547D;&#x4EE4;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x5BF9;&#x547D;&#x4EE4;&#x5206;&#x7EC4;"><b>1.3. </b>&#x4F7F;&#x7528;{}&#x5BF9;&#x547D;&#x4EE4;&#x5206;&#x7EC4;</a></li></ul></ul></div><a href="#&#x591A;&#x7EC4;sed&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x591A;&#x7EC4;sed&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;"><a name="&#x591A;&#x7EC4;sed&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;" class="anchor-navigation-ex-anchor" href="#&#x591A;&#x7EC4;sed&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x591A;&#x7EC4;Sed&#x547D;&#x4EE4;&#x7684;&#x6267;&#x884C;</h1>
-<p>&#x6B63;&#x5982;&#x6211;&#x4EEC;&#x5728;&#x7B2C;&#x4E00;&#x7AE0;&#x4E2D;&#x6240;&#x8BB2;&#x7684;&#x90A3;&#x6837;&#xFF0C;&#x6709;&#x597D;&#x51E0;&#x79CD;&#x65B9;&#x6CD5;&#x6765;&#x6267;&#x884C;&#x6765;&#x81EA;&#x547D;&#x4EE4;&#x884C;&#x7684;&#x591A;&#x4E2A;sed&#x547D;&#x4EE4;</p>
-<h2 id="&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4F7F;&#x7528;-e&#x53C2;&#x6570;"><a name="&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4F7F;&#x7528;-e&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4F7F;&#x7528;-e&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x5728;&#x547D;&#x4EE4;&#x884C;&#x4F7F;&#x7528;-e&#x53C2;&#x6570;</h2>
-<p>&#x4F7F;&#x7528;sed&#x547D;&#x4EE4;&#x7684;-e&#x53C2;&#x6570;&#xFF0C;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>sed -e &apos;command1&apos; -e &apos;command2&apos; -e &apos;command3&apos;
-</code></pre><p><strong>&#x5728;/etc/passwd&#x6587;&#x4EF6;&#x4E2D;&#x641C;&#x7D22;&quot;root&quot;&#x6216;&#x8005;&quot;nobody&quot;&#x6216;&#x8005;&quot;mail&quot;</strong></p>
-<pre><code>sed -n -e &apos;/^root/ p&apos; -e &apos;/^nobody/ p&apos; -e &apos;/^mail/ p&apos; /etc/passwd
-</code></pre><h2 id="&#x4F7F;&#x7528;&#x5206;&#x89E3;sed&#x7684;&#x547D;&#x4EE4;"><a name="&#x4F7F;&#x7528;&#x5206;&#x89E3;sed&#x7684;&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x5206;&#x89E3;sed&#x7684;&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x4F7F;&#x7528;&quot;\&quot;&#x5206;&#x89E3;sed&#x7684;&#x547D;&#x4EE4;</h2>
-<p>&#x5F53;&#x4F60;&#x7684;&#x547D;&#x4EE4;&#x5F88;&#x957F;&#xFF0C;&#x4F8B;&#x5982;&#x5728;&#x4E00;&#x884C;&#x547D;&#x4EE4;&#x4E2D;&#x4F7F;&#x7528;-e&#x53C2;&#x6570;&#x6307;&#x5B9A;&#x597D;&#x51E0;&#x4E2A;sed&#x547D;&#x4EE4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&quot;\&quot;&#x8FDB;&#x884C;&#x5206;&#x89E3;&#x3002;</p>
-<pre><code>sed -n -e &apos;/^root/ p&apos; \
--e &apos;/^nobody/ p&apos; \
--e &apos;/^mail/ p&apos; \
-/etc/passwd
-</code></pre><h2 id="&#x4F7F;&#x7528;&#x5BF9;&#x547D;&#x4EE4;&#x5206;&#x7EC4;"><a name="&#x4F7F;&#x7528;&#x5BF9;&#x547D;&#x4EE4;&#x5206;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x5BF9;&#x547D;&#x4EE4;&#x5206;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x4F7F;&#x7528;{}&#x5BF9;&#x547D;&#x4EE4;&#x5206;&#x7EC4;</h2>
-<p>&#x5F53;&#x4F60;&#x6709;&#x5F88;&#x5C11;&#x7684;sed&#x547D;&#x4EE4;&#x7EC4;&#x9700;&#x8981;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&quot;{}&quot;&#x7EDF;&#x4E00;&#x5206;&#x7EC4;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
-<pre><code>sed -n &apos;{
-    /^root/ p
-    /^nobody/ p
-    /^mail/ p
-}&apos; /etc/passwd
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><span class="title-icon "></span><a href="#&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x5230;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;h-&#x547D;&#x4EE4;&#xFF09;"><b>1. </b>&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x5230;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;H &#x547D;&#x4EE4;&#xFF09;</a></li></ul></div><a href="#&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x5230;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;h-&#x547D;&#x4EE4;&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x5230;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;h-&#x547D;&#x4EE4;&#xFF09;"><a name="&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x5230;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;h-&#x547D;&#x4EE4;&#xFF09;" class="anchor-navigation-ex-anchor" href="#&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x5230;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;h-&#x547D;&#x4EE4;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x5230;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF08;H &#x547D;&#x4EE4;&#xFF09;</h1>
+<p>&#x5927;&#x5199;&#x7684;H&#x662F;&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x884C;&#x5230;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#xFF0C;&#x4EE5;&#x524D;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x4F1A;&#x88AB;&#x8986;&#x76D6;;
+&#x76F8;&#x53CD;&#x4F1A;&#x5728;&#x672B;&#x5C3E;&#x589E;&#x52A0;&#x65B0;&#x884C;&#xFF0C;&#x5C06;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x8FFD;&#x52A0;&#x5230;&#x4FDD;&#x7559;&#x7A7A;&#x95F4;&#x7684;&#x73B0;&#x6709;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x5305;&#x542B;&#x201C;&#x7B2C;1&#x884C;&#x201D;&#x5E76;&#x4E14;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#x5305;&#x542B;&#x201C;&#x7B2C;2&#x884C;&#x201D;; &#x6267;&#x884C;H&#x547D;&#x4EE4;&#x540E;&#xFF0C;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#xFF0C;&#x3001;
+&#x4ECD;&#x7136;&#x4F1A;&#x6709;&#x201C;&#x7B2C;1&#x884C;&#x201D;&#xFF0C;&#x4F46;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#x5C06;&#x6709;&#x201C;&#x7B2C;1&#x884C;\n&#x7B2C;2&#x884C;&#x201D;&#x3002;</p>
+<p><strong>&#x6253;&#x5370;managers&#x7684;&#x59D3;&#x540D;&#x548C;&#x804C;&#x52A1;&#xFF08;&#x5206;&#x5F00;&#x6392;&#x5217;&#xFF09;</strong></p>
+<pre><code>$ sed -n -e &apos;/Manager/!h&apos; -e &apos;/Manager/{H;x;p}&apos; empnametitle.txt
+Jason Smith
+IT Manager
+Jane Miller
+Sales Manager
+</code></pre><p>&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF1A;</p>
+<ul>
+<li><p><code>__/Manager/!h__</code> - &#x5982;&#x679C;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x4E0D;&#x5305;&#x542B;Manager&#xFF08;&#x6A21;&#x5F0F;&#x540E;&#x9762;&#x7684;&#xFF01;&#x201C;&#x4E0D;&#x7B49;&#x4E8E;&#x201D; &#x6A21;&#x5F0F;&#xFF09;&#xFF0C;&#x5219;&#x5C06;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x590D;&#x5236;&#x5230;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#x3002; &#xFF08;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;
+&#x8FD9;&#x53EF;&#x80FD;&#x662F;&#x5458;&#x5DE5;&#x59D3;&#x540D;&#xFF08;&#x6216;&#xFF09;&#x4E0D;&#x662F;&#x201C;&#x7ECF;&#x7406;&#x201D;&#x7684;&#x6807;&#x9898;&#x3002;&#xFF09;&#x8FD9;&#x4E0E;&#x6211;&#x4EEC;&#x5728;h&#x547D;&#x4EE4;&#x793A;&#x4F8B;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x76F8;&#x540C;&#x3002;</p>
+</li>
+<li><p><code>__/Manager/{H;x;p}__</code> - &#x5982;&#x679C;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#x7684;&#x5185;&#x5BB9;&#x5305;&#x542B;&#x5173;&#x952E;&#x5B57;&#x201C;Manager&#x201D;&#xFF0C;&#x5219;H&#x547D;&#x4EE4;&#x4F1A;&#x8FFD;&#x52A0;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF08;&#x5373;Manager&#xFF09;&#x4EE5;&#x4F7F;&#x7528;&#x65B0;&#x884C;&#x4FDD;&#x7559;&#x7A7A;&#x95F4;&#x3002;
+&#x56E0;&#x6B64;&#xFF0C;&#x6B64;&#x9636;&#x6BB5;&#x7684;&#x4FDD;&#x7559;&#x7A7A;&#x95F4;&#x5C06;&#x5177;&#x6709;&#x201C;Employee Name \ nTitle&#x201D;&#xFF08;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x5173;&#x952E;&#x5B57;manager&#xFF09;&#x3002; x&#x547D;&#x4EE4;&#x4EA4;&#x6362;&#x4FDD;&#x6301;&#x7A7A;&#x95F4;&#x5230;&#x6A21;&#x5F0F;&#x7A7A;&#x95F4;&#xFF0C;&#x5E76;&#x4E14;p&#x6253;&#x5370;&#x56FE;&#x6848;&#x7A7A;&#x95F4;&#x3002;</p>
+</li>
+</ul>
+<p> &#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;&#x547D;&#x4EE4;&#x4FDD;&#x5B58;&#x5230;&#x811A;&#x672C;&#x4E2D;&#x6267;&#x884C;&#xFF0C;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code>$ vi H-upper.sed
+#!/bin/sed -nf
+
+/Manager/!h
+/Manager/{H;x;p}
+
+$ chmod u+x H-upper.sed
+$ ./H-upper.sed empnametitle.txt
+Jason Smith
+IT Manager
+Jane Miller
+Sales Manager
+</code></pre><p>&#x5982;&#x679C;&#x60A8;&#x5E0C;&#x671B;&#x5458;&#x5DE5;&#x7684;&#x59D3;&#x540D;&#x4E0E;&#x804C;&#x52A1;&#x6253;&#x5370;&#x5728;&#x540C;&#x4E00;&#x884C;&#xFF0C;&#x53EF;&#x4EE5;&#x7A0D;&#x5FAE;&#x4FEE;&#x6539;&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#xFF0C;&#x4EE5;&#x201C;&#xFF1A;&#x201D;&#x4F5C;&#x4E3A;&#x5206;&#x9694;&#x7B26;</p>
+<pre><code>$ sed -n -e &apos;/Manager/!h&apos; -e &apos;/Manager/{H;x;s/\n/:/;p}&apos; empnametitle.txt
+Jason Smith:IT Manager
+Jane Miller:Sales Manager
+</code></pre><p>&#x5728;&#x7B2C;&#x4E8C;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;&#x9664;&#x4E86;&#x6DFB;&#x52A0;&#x5230;&#x7B2C;&#x4E8C;&#x4E2A;-e&#x9009;&#x9879;&#x7684;&#x66FF;&#x6362;&#x547D;&#x4EE4;&#x4E4B;&#x5916;&#xFF0C;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x90FD;&#x4E0E;&#x524D;&#x4E00;&#x4E2A;&#x793A;&#x4F8B;&#x76F8;&#x540C;&#x3002; 
+H&#xFF0C;x&#x548C;p&#x547D;&#x4EE4;&#x4E0E;&#x4EE5;&#x524D;&#x4E00;&#x6837;; s&#x547D;&#x4EE4;&#x7528;&#xFF1A;&#x66FF;&#x6362;\n&#xFF0C; &#x66FF;&#x6362;&#x540E;&#x6253;&#x5370;&#x3002; &#x56E0;&#x6B64;&#xFF0C;&#x59D3;&#x540D;&#x548C;&#x804C;&#x52A1;&#x6253;&#x5370;&#x5728;&#x4E00;&#x884C;&#x4E0A;&#xFF0C;&#x7528;&#x5192;&#x53F7;&#x5206;&#x9694;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5C06;&#x547D;&#x4EE4;&#x7528;&#x811A;&#x672C;&#x6267;&#x884C;&#xFF0C;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code>$ vi H1-upper.sed
+#!/bin/sed -nf
+
+/Manager/!h
+/Manager/{H;x;s/\n/:/;p}
+
+$ chmod u+x H1-upper.sed
+$ ./H1-upper.sed empnametitle.txt
+Jason Smith:IT Manager
+Jane Miller:Sales Manager
 </code></pre>
                                 
                                 </section>
@@ -1013,12 +1043,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 说明">
+                <a href="copyp2h.html" class="navigation navigation-prev " aria-label="Previous page: 42. 拷贝模式空间到保持空间（h 命令）">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="script.html" class="navigation navigation-next " aria-label="Next page: 24. Sed脚本">
+                <a href="copyh2p.html" class="navigation navigation-next " aria-label="Next page: 44. 拷贝保持空间到模式空间（g 命令）">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1029,7 +1059,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"23. 命令行中的多个Sed命令","level":"5.2","depth":1,"next":{"title":"24. Sed脚本","level":"5.3","depth":1,"path":"part4/script.md","ref":"part4/script.md","articles":[]},"previous":{"title":"说明","level":"5.1","depth":1,"path":"part4/README.md","ref":"part4/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part4/multiplecmd.md","mtime":"2018-05-30T01:47:17.048Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-07T07:05:43.387Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"43. 追加模式空间到保持空间（H 命令）","level":"7.4","depth":1,"next":{"title":"44. 拷贝保持空间到模式空间（g 命令）","level":"7.5","depth":1,"path":"part6/copyh2p.md","ref":"part6/copyh2p.md","articles":[]},"previous":{"title":"42. 拷贝模式空间到保持空间（h 命令）","level":"7.3","depth":1,"path":"part6/copyp2h.md","ref":"part6/copyp2h.md","articles":[]},"dir":"ltr"},"config":{"plugins":["emphasize","theme-comscore","-prism","-prism-themes","highlight","simple-page-toc","anchors","anchor-navigation-ex","terminal","-splitter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prism-themes/themes/prism-duotone-sea.css"]},"emphasize":{},"livereload":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":true,"showLevel":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":true,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"}},"theme-comscore":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"terminal":{"copyButtons":true,"fade":false,"style":"classic"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"devops007","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sed-and-Awk-101-Hacks","links":{"sidebar":{"Home":"https://linuxer.io"}},"gitbook":"*"},"file":{"path":"part6/appendp2h.md","mtime":"2018-09-07T09:14:17.040Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-07T07:05:43.387Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
