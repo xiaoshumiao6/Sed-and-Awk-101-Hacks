@@ -10,7 +10,7 @@ Enhance Your UNIX and Linux Life with Sed and Awk
 Sed和Awk是两个很好的工具，只需几行代码就可以解决很多复杂问题，快速完成任务--在大多数情况下，我们
 仅需要单行代码。<br/>
 
-本书解释如下：
+本书组织如下：
   * 第 1~7 章涵盖sed，第8~13章讲述awk。
   * 第 1~5 章解释了各种sed命令，包括强大的sed替换，正则表达式和执行sed命令的不同方法。
   * 第 6~7 章介绍了sed的保持空间和模式空间，sed多行命令和sed循环。
@@ -25,6 +25,6 @@ __示例说明__:
 Lines of code for you to type, with the result you will see on screen.
 ```
 
-代码下方的纯文本会显示任何额外的说明和讨论。<br/>
+代码下方将以纯文本的形式显示其他说明或讨论。<br/>
 
 另请注意，应该在一行上输入命令，如果复制粘贴，请确保该命令被粘贴为一行。
